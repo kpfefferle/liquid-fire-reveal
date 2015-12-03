@@ -1,26 +1,37 @@
-# Liquid-fire-reveal
+# liquid-fire-reveal
 
-This README outlines the details of collaborating on this Ember addon.
+> Reveal transitions for [liquid-fire](https://ef4.github.io/liquid-fire/).
+
+This addon defines four new transitions for liquid-fire: `revealUp`, `revealDown`, `revealLeft`, and `revealRight`.
 
 ## Installation
+
+In your ember-cli project, run:
+
+```bash
+ember install liquid-fire # if not already installed
+ember install liquid-fire-reveal
+```
+
+## Usage
+
+[Define a liquid-fire transition](https://ef4.github.io/liquid-fire/#/transition-map) using any of the four named reveal transitions:
+
+```javascript
+// app/transitions.js
+this.transition(
+  this.fromRoute('login'),
+  this.toRoute('index'),
+  this.use('revealDown')
+);
+```
+
+The old content will slide away in the direction specified, revealing the new content in its place.
+
+**Note:** You'll probably want to make sure that the content being transitioned away from has a background that will mask the new content during the transition.
+
+## Developing
 
 * `git clone` this repository
 * `npm install`
 * `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
