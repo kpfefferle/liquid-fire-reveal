@@ -26,7 +26,7 @@ this.transition(
 );
 ```
 
-The old content will slide away in the direction specified, revealing the new content in its place.
+The old content will slide away in the direction specified, revealing the new content in its place. See [this example page](http://kevin.pfefferle.co/liquid-fire-reveal/) to see each transition in action.
 
 **Note:** You'll probably want to make sure that the content being transitioned away from has a background that will mask the new content during the transition.
 
