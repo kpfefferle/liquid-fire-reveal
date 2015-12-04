@@ -1,4 +1,4 @@
-# liquid-fire-reveal
+# liquid-fire-reveal [![Build Status](https://travis-ci.org/kpfefferle/liquid-fire-reveal.svg?branch=master)](https://travis-ci.org/kpfefferle/liquid-fire-reveal)
 
 > Reveal transitions for [liquid-fire](https://ef4.github.io/liquid-fire/).
 
