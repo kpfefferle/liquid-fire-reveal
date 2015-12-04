@@ -1,6 +1,6 @@
 {
   "name": "liquid-fire-reveal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reveal transitions for liquid-fire.",
   "directories": {
     "doc": "doc",
