@@ -38,10 +38,11 @@
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
-    "ember-normalize": "0.0.9",
+    "ember-normalize": "1.0.0",
     "ember-resolver": "^2.0.3",
     "liquid-fire": "0.23.1",
-    "loader.js": "^4.0.4"
+    "loader.js": "^4.0.4",
+    "normalize.css": "^4.1.1"
   },
   "keywords": [
     "ember-addon",
