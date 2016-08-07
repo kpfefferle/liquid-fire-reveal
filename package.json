@@ -42,7 +42,7 @@
     "ember-normalize": "1.0.0",
     "ember-resolver": "^2.0.3",
     "liquid-fire": "0.24.1",
-    "loader.js": "^4.0.10",
+    "loader.js": "^4.0.11",
     "normalize.css": "^4.1.1"
   },
   "keywords": [
