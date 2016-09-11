@@ -32,6 +32,7 @@ The old content will slide away in the direction specified, revealing the new co
 
 ## Developing
 
-* `git clone` this repository
+* `git clone <repository-url>` this repository
+* `cd liquid-fire-reveal`
 * `npm install`
 * `bower install`
