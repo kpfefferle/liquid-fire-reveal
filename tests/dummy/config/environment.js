@@ -39,7 +39,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/liquid-fire-reveal';
+    ENV.rootURL = '/liquid-fire-reveal/';
   }
 
   return ENV;
