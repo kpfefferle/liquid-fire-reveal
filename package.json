@@ -43,7 +43,7 @@
     "ember-resolver": "^2.1.0",
     "liquid-fire": "0.26.1",
     "loader.js": "^4.0.11",
-    "normalize.css": "^4.1.1"
+    "normalize.css": "^5.0.0"
   },
   "keywords": [
     "ember-addon",
