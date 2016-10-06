@@ -1,41 +1,41 @@
 {
   "_args": [
     [
-      "normalize.css@^4.1.1",
+      "normalize.css@^5.0.0",
       "/Users/kevin/code/kpfefferle/liquid-fire-reveal"
     ]
   ],
-  "_from": "normalize.css@>=4.1.1 <5.0.0",
-  "_id": "normalize.css@4.2.0",
+  "_from": "normalize.css@>=5.0.0 <6.0.0",
+  "_id": "normalize.css@5.0.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/normalize.css",
-  "_nodeVersion": "5.4.1",
+  "_nodeVersion": "6.5.0",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/normalize.css-4.2.0.tgz_1467265073038_0.6465702017303556"
+    "tmp": "tmp/normalize.css-5.0.0.tgz_1475499538683_0.3258037401828915"
   },
   "_npmUser": {
     "email": "jonathantneal@hotmail.com",
     "name": "jonathantneal"
   },
-  "_npmVersion": "3.9.2",
+  "_npmVersion": "3.10.3",
   "_phantomChildren": {},
   "_requested": {
     "name": "normalize.css",
-    "raw": "normalize.css@^4.1.1",
-    "rawSpec": "^4.1.1",
+    "raw": "normalize.css@^5.0.0",
+    "rawSpec": "^5.0.0",
     "scope": null,
-    "spec": ">=4.1.1 <5.0.0",
+    "spec": ">=5.0.0 <6.0.0",
     "type": "range"
   },
   "_requiredBy": [
     "#DEV:/"
   ],
-  "_resolved": "https://registry.npmjs.org/normalize.css/-/normalize.css-4.2.0.tgz",
-  "_shasum": "21d66cc557154d4379fd1e079ec7de58a379b099",
+  "_resolved": "https://registry.npmjs.org/normalize.css/-/normalize.css-5.0.0.tgz",
+  "_shasum": "7cec875ce8178a5333c4de80b68ea9c18b9d7c37",
   "_shrinkwrap": null,
-  "_spec": "normalize.css@^4.1.1",
+  "_spec": "normalize.css@^5.0.0",
   "_where": "/Users/kevin/code/kpfefferle/liquid-fire-reveal",
   "bugs": {
     "url": "https://github.com/necolas/normalize.css/issues"
@@ -55,19 +55,19 @@
   "dependencies": {},
   "description": "A modern alternative to CSS resets",
   "devDependencies": {
-    "stylelint": "^6.7.1",
-    "stylelint-config-standard": "^9.0.0"
+    "stylelint": "^7.3.1",
+    "stylelint-config-standard": "^13.0.2"
   },
   "directories": {},
   "dist": {
-    "shasum": "21d66cc557154d4379fd1e079ec7de58a379b099",
-    "tarball": "https://registry.npmjs.org/normalize.css/-/normalize.css-4.2.0.tgz"
+    "shasum": "7cec875ce8178a5333c4de80b68ea9c18b9d7c37",
+    "tarball": "https://registry.npmjs.org/normalize.css/-/normalize.css-5.0.0.tgz"
   },
   "files": [
     "LICENSE.md",
     "normalize.css"
   ],
-  "gitHead": "bfe6c20e184559b0ce92d394b1b53f8398157012",
+  "gitHead": "f06565fe8e0e1ad1b88f2732719e28ed97bde40f",
   "homepage": "https://necolas.github.io/normalize.css#readme",
   "license": "MIT",
   "main": "normalize.css",
@@ -99,5 +99,5 @@
   "stylelint": {
     "extends": "stylelint-config-standard"
   },
-  "version": "4.2.0"
+  "version": "5.0.0"
 }
