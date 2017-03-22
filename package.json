@@ -51,7 +51,7 @@
     "ember-normalize": "1.0.0",
     "ember-resolver": "^3.0.0",
     "ember-source": "~2.11.3",
-    "liquid-fire": "0.27.1",
+    "liquid-fire": "0.27.2",
     "loader.js": "^4.2.3",
     "normalize.css": "^5.0.0"
   },
