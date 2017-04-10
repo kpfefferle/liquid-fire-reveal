@@ -32,7 +32,7 @@
     "ember-cli-dependency-checker": "^1.4.0",
     "ember-cli-deploy": "1.0.0",
     "ember-cli-deploy-build": "1.0.0",
-    "ember-cli-deploy-git": "1.1.0",
+    "ember-cli-deploy-git": "kpfefferle/ember-cli-deploy-git#ed15ef8fafb3bdeb24f26e2a5036401ffb42377c",
     "ember-cli-eslint": "^3.0.3",
     "ember-cli-htmlbars": "^1.1.1",
     "ember-cli-htmlbars-inline-precompile": "^0.3.6",
