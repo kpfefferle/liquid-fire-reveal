@@ -1986,9 +1986,9 @@ ember-cli-deploy-build@1.0.0:
     glob "^7.1.1"
     rsvp "^3.5.0"
 
-ember-cli-deploy-git@ef4/ember-cli-deploy-git#f8d237a96b959833214a3bb1cb1576250eb69108:
-  version "1.1.0"
-  resolved "https://codeload.github.com/ef4/ember-cli-deploy-git/tar.gz/f8d237a96b959833214a3bb1cb1576250eb69108"
+ember-cli-deploy-git@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-git/-/ember-cli-deploy-git-1.1.1.tgz#bc7b080b0748ae787b7eb5cda69d34165ba5131e"
   dependencies:
     ember-cli-babel "^5.1.5"
     ember-cli-deploy-plugin "^0.2.0"
