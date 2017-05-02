@@ -50,7 +50,7 @@
     "ember-source": "~2.13.0",
     "liquid-fire": "0.27.3",
     "loader.js": "^4.3.0",
-    "normalize.css": "^6.0.0"
+    "normalize.css": "^7.0.0"
   },
   "engines": {
     "node": ">= 4"
