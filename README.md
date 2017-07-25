@@ -1,6 +1,6 @@
 # liquid-fire-reveal [![CircleCI](https://circleci.com/gh/kpfefferle/liquid-fire-reveal.svg?style=svg)](https://circleci.com/gh/kpfefferle/liquid-fire-reveal)
 
-> Reveal transitions for [liquid-fire](https://ef4.github.io/liquid-fire/).
+> Reveal transitions for [liquid-fire](https://ember-animation.github.io/liquid-fire/).
 
 This addon defines four new transitions for liquid-fire: `revealUp`, `revealDown`, `revealLeft`, and `revealRight`.
 
