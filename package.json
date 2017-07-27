@@ -49,7 +49,7 @@
     "ember-resolver": "^4.3.0",
     "ember-source": "~2.14.1",
     "liquid-fire": "0.27.3",
-    "loader.js": "^4.5.1",
+    "loader.js": "^4.6.0",
     "normalize.css": "^7.0.0"
   },
   "engines": {
