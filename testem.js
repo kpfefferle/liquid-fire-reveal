@@ -9,7 +9,7 @@ module.exports = {
     'Chrome'
   ],
   browser_args: {
-    'Chrome': [
+    Chrome: [
       '--headless',
       '--disable-gpu',
       '--remote-debugging-port=9222',
