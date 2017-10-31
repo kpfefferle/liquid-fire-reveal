@@ -1,23 +1,39 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  downRed: true,
-  upRed: true,
-  leftRed: true,
-  rightRed: true,
+  revealDownRed: true,
+  revealUpRed: true,
+  revealLeftRed: true,
+  revealRightRed: true,
+  hideDownRed: true,
+  hideUpRed: true,
+  hideLeftRed: true,
+  hideRightRed: true,
 
   actions: {
-    toggleDown() {
-      this.toggleProperty('downRed');
+    toggleRevealDown() {
+      this.toggleProperty('revealDownRed');
     },
-    toggleUp() {
-      this.toggleProperty('upRed');
+    toggleRevealUp() {
+      this.toggleProperty('revealUpRed');
     },
-    toggleLeft() {
-      this.toggleProperty('leftRed');
+    toggleRevealLeft() {
+      this.toggleProperty('revealLeftRed');
     },
-    toggleRight() {
-      this.toggleProperty('rightRed');
+    toggleRevealRight() {
+      this.toggleProperty('revealRightRed');
+    },
+    toggleHideDown() {
+      this.toggleProperty('hideDownRed');
+    },
+    toggleHideUp() {
+      this.toggleProperty('hideUpRed');
+    },
+    toggleHideLeft() {
+      this.toggleProperty('hideLeftRed');
+    },
+    toggleHideRight() {
+      this.toggleProperty('hideRightRed');
     }
   }
 });

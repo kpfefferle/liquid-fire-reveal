@@ -18,6 +18,7 @@ body {
   position: relative;
   width: calc(50% - 25px);
   height: 250px;
+  margin: 10px;
 }
 
 .buttons {
@@ -49,8 +50,8 @@ body {
 }
 
 .red {
-  background: red;
+  background: #faa;
 }
 .blue {
-  background: blue;
+  background: #aaf;
 }

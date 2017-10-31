@@ -2,7 +2,9 @@
 
 > Reveal transitions for [liquid-fire](https://ember-animation.github.io/liquid-fire/).
 
-This addon defines four new transitions for liquid-fire: `revealUp`, `revealDown`, `revealLeft`, and `revealRight`.
+This addon defines eight new transitions for liquid-fire:
+  * `revealUp`, `revealDown`, `revealLeft`, and `revealRight`.
+  * `hideUp`, `hideDown`, `hideLeft`, and `hideRight`.
 
 ## Installation
 
@@ -25,6 +27,9 @@ this.transition(
   this.use('revealDown')
 );
 ```
+
+Optionally, you can add `{ shadow: true }` as an option to add in a box shadow on the animating
+content and account for it in the sizing.
 
 The old content will slide away in the direction specified, revealing the new content in its place. See [this example page](http://kevin.pfefferle.co/liquid-fire-reveal/) to see each transition in action.
 
