@@ -1,6 +1,6 @@
 {
   "name": "normalize.css",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "A modern alternative to CSS resets",
   "main": "normalize.css",
   "style": "normalize.css",
@@ -25,7 +25,9 @@
       "font-family-no-duplicate-names": [
         true,
         {
-          "ignoreFontFamilyNames": ["monospace"]
+          "ignoreFontFamilyNames": [
+            "monospace"
+          ]
         }
       ]
     }
