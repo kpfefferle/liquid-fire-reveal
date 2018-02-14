@@ -4409,9 +4409,9 @@ linkify-it@^2.0.0:
   dependencies:
     uc.micro "^1.0.1"
 
-liquid-fire@0.29.1:
-  version "0.29.1"
-  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.29.1.tgz#bcfea12db65799def263721a2b9dd6142d426bdf"
+liquid-fire@0.29.2:
+  version "0.29.2"
+  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.29.2.tgz#db3900c0d6554262e2c2f30a3f24681a3006f850"
   dependencies:
     broccoli-funnel "^1.0.1"
     broccoli-merge-trees "^1.0.0"
@@ -4422,7 +4422,7 @@ liquid-fire@0.29.1:
     ember-getowner-polyfill "^2.0.1"
     ember-hash-helper-polyfill "^0.2.0"
     match-media "^0.2.0"
-    velocity-animate ">= 0.11.8"
+    velocity-animate "^1.5.1"
 
 livereload-js@^2.2.2:
   version "2.2.2"
@@ -7182,9 +7182,9 @@ vary@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.1.tgz#67535ebb694c1d52257457984665323f587e8d37"
 
-"velocity-animate@>= 0.11.8":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/velocity-animate/-/velocity-animate-1.5.0.tgz#fc8771d8dfe1136ff02a707e10fbb0957c4b030f"
+velocity-animate@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/velocity-animate/-/velocity-animate-1.5.1.tgz#606837047bab8fbfb59a636d1d82ecc3f7bd71a6"
 
 verror@1.10.0:
   version "1.10.0"
