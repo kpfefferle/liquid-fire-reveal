@@ -3347,7 +3347,7 @@ e.length=i}(r,"string"==typeof e?[e]:e):[].push.call(r,e)),r}(i)):o.push(i),o):o
 var i=n.queue(r,t),o=i.shift()
 "inprogress"===o&&(o=i.shift()),o&&("fx"===t&&i.unshift("inprogress"),o.call(r,function(){n.dequeue(r,t)}))})},n.fn=n.prototype={init:function(e){if(e.nodeType)return this[0]=e,this
 throw new Error("Not a DOM node.")},offset:function(){var t=this[0].getBoundingClientRect?this[0].getBoundingClientRect():{top:0,left:0}
-return{top:t.top+(e.pageYOffset||document.scrollTop||0)-(document.clientTop||0),left:t.left+(e.pageXOffset||document.scrollLeft||0)-(document.clientLeft||0)}},position:function(){var e=this[0],t=function(e){for(var t=e.offsetParent;t&&"html"!==t.nodeName.toLowerCase()&&t.style&&"static"===t.style.position;)t=t.offsetParent
+return{top:t.top+(e.pageYOffset||document.scrollTop||0)-(document.clientTop||0),left:t.left+(e.pageXOffset||document.scrollLeft||0)-(document.clientLeft||0)}},position:function(){var e=this[0],t=function(e){for(var t=e.offsetParent;t&&"html"!==t.nodeName.toLowerCase()&&t.style&&"static"===t.style.position.toLowerCase();)t=t.offsetParent
 return t||document}(e),r=this.offset(),i=/^(?:body|html)$/i.test(t.nodeName)?{top:0,left:0}:n(t).offset()
 return r.top-=parseFloat(e.style.marginTop)||0,r.left-=parseFloat(e.style.marginLeft)||0,t.style&&(i.top+=parseFloat(t.style.borderTopWidth)||0,i.left+=parseFloat(t.style.borderLeftWidth)||0),{top:r.top-i.top,left:r.left-i.left}}}
 var r={}
@@ -3375,7 +3375,7 @@ var S="generateBezier("+[e,n,r,i]+")"
 return C.toString=function(){return S},C}function p(e,t){var n=e
 return w.isString(e)?O.Easings[e]||(n=!1):n=w.isArray(e)&&1===e.length?l.apply(null,e):w.isArray(e)&&2===e.length?C.apply(null,e.concat([t])):!(!w.isArray(e)||4!==e.length)&&c.apply(null,e),!1===n&&(n=O.Easings[O.defaults.easing]?O.defaults.easing:E),n}function f(e){if(e){var t=O.timestamp&&!0!==e?e:y.now(),n=O.State.calls.length
 n>1e4&&(O.State.calls=i(O.State.calls),n=O.State.calls.length)
-for(var o=0;o<n;o++)if(O.State.calls[o]){var a=O.State.calls[o],u=a[0],l=a[2],c=a[3],p=!!c,g=null,v=a[5],b=a[6]
+for(var o=0;o<n;o++)if(O.State.calls[o]){var a=O.State.calls[o],u=a[0],l=a[2],c=a[3],p=!c,g=null,v=a[5],b=a[6]
 if(c||(c=O.State.calls[o][3]=t-16),v){if(!0!==v.resume)continue
 c=a[3]=Math.round(t-b-16),a[5]=null}b=a[6]=t-c
 for(var _=Math.min(b/l.duration,1),x=0,E=u.length;x<E;x++){var C=u[x],T=C.element
@@ -3420,7 +3420,7 @@ return o}}}(),b=function(){return Array.prototype.includes?function(e,t){return 
 return!1}},w={isNumber:function(e){return"number"==typeof e},isString:function(e){return"string"==typeof e},isArray:Array.isArray||function(e){return"[object Array]"===Object.prototype.toString.call(e)},isFunction:function(e){return"[object Function]"===Object.prototype.toString.call(e)},isNode:function(e){return e&&e.nodeType},isWrapped:function(e){return e&&e!==t&&w.isNumber(e.length)&&!w.isString(e)&&!w.isFunction(e)&&!w.isNode(e)&&(0===e.length||w.isNode(e[0]))},isSVG:function(e){return t.SVGElement&&e instanceof t.SVGElement},isEmptyObject:function(e){for(var t in e)if(e.hasOwnProperty(t))return!1
 return!0}},_=!1
 if(e.fn&&e.fn.jquery?(d=e,_=!0):d=t.Velocity.Utilities,m<=8&&!_)throw new Error("Velocity: IE8 and below require jQuery to be loaded before Velocity.")
-if(!(m<=7)){var x=400,E="swing",O={State:{isMobile:/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),isAndroid:/Android/i.test(navigator.userAgent),isGingerbread:/Android 2\.3\.[3-7]/i.test(navigator.userAgent),isChrome:t.chrome,isFirefox:/Firefox/i.test(navigator.userAgent),prefixElement:n.createElement("div"),prefixMatches:{},scrollAnchor:null,scrollPropertyLeft:null,scrollPropertyTop:null,isTicking:!1,calls:[],delayedElements:{count:0}},CSS:{},Utilities:d,Redirects:{},Easings:{},Promise:t.Promise,defaults:{queue:"",duration:x,easing:E,begin:r,complete:r,progress:r,display:r,visibility:r,loop:!1,delay:!1,mobileHA:!0,_cacheValues:!0,promiseRejectEmpty:!0},init:function(e){d.data(e,"velocity",{isSVG:w.isSVG(e),isAnimating:!1,computedStyle:null,tweensContainer:null,rootPropertyValueCache:{},transformCache:{}})},hook:null,mock:!1,version:{major:1,minor:5,patch:0},debug:!1,timestamp:!0,pauseAll:function(e){var t=(new Date).getTime()
+if(!(m<=7)){var x=400,E="swing",O={State:{isMobile:/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(t.navigator.userAgent),isAndroid:/Android/i.test(t.navigator.userAgent),isGingerbread:/Android 2\.3\.[3-7]/i.test(t.navigator.userAgent),isChrome:t.chrome,isFirefox:/Firefox/i.test(t.navigator.userAgent),prefixElement:n.createElement("div"),prefixMatches:{},scrollAnchor:null,scrollPropertyLeft:null,scrollPropertyTop:null,isTicking:!1,calls:[],delayedElements:{count:0}},CSS:{},Utilities:d,Redirects:{},Easings:{},Promise:t.Promise,defaults:{queue:"",duration:x,easing:E,begin:r,complete:r,progress:r,display:r,visibility:r,loop:!1,delay:!1,mobileHA:!0,_cacheValues:!0,promiseRejectEmpty:!0},init:function(e){d.data(e,"velocity",{isSVG:w.isSVG(e),isAnimating:!1,computedStyle:null,tweensContainer:null,rootPropertyValueCache:{},transformCache:{}})},hook:null,mock:!1,version:{major:1,minor:5,patch:1},debug:!1,timestamp:!0,pauseAll:function(e){var t=(new Date).getTime()
 d.each(O.State.calls,function(t,n){if(n){if(e!==r&&(n[2].queue!==e||!1===n[2].queue))return!0
 n[5]={resume:!1}}}),d.each(O.State.delayedElements,function(e,n){n&&a(n,t)})},resumeAll:function(e){(new Date).getTime()
 d.each(O.State.calls,function(t,n){if(n){if(e!==r&&(n[2].queue!==e||!1===n[2].queue))return!0
@@ -3562,11 +3562,12 @@ for(var D in v)if(v.hasOwnProperty(D)){var L=S.Names.camelCase(D),F=N(v[D])
 if(b(S.Lists.colors,L)){var H=F[0],B=F[1],V=F[2]
 if(S.RegEx.isHex.test(H)){for(var z=["Red","Green","Blue"],U=S.Values.hexToRgb(H),W=V?S.Values.hexToRgb(V):r,G=0;G<z.length;G++){var K=[U[G]]
 B&&K.push(B),W!==r&&K.push(W[G]),M(L+z[G],K)}continue}}M(L,F)}l.element=e}l.element&&(S.Values.addClass(e,"velocity-animating"),q.push(l),(c=s(e))&&(""===u.queue&&(c.tweensContainer=l,c.opts=u),c.isAnimating=!0),k===P-1?(O.State.calls.push([q,y,u,null,C.resolver,null,0]),!1===O.State.isTicking&&(O.State.isTicking=!0,f())):k++)}var a,u=d.extend({},O.defaults,_),l={}
-switch(s(e)===r&&O.init(e),parseFloat(u.delay)&&!1!==u.queue&&d.queue(e,u.queue,function(t){O.velocityQueueEntryFlag=!0
-var n=O.State.delayedElements.count++
-O.State.delayedElements[n]=e
-var r=function(e){return function(){O.State.delayedElements[e]=!1,t()}}(n)
-s(e).delayBegin=(new Date).getTime(),s(e).delay=parseFloat(u.delay),s(e).delayTimer={setTimeout:setTimeout(t,parseFloat(u.delay)),next:r}}),u.duration.toString().toLowerCase()){case"fast":u.duration=200
+switch(s(e)===r&&O.init(e),parseFloat(u.delay)&&!1!==u.queue&&d.queue(e,u.queue,function(t,n){if(!0===n)return!0
+O.velocityQueueEntryFlag=!0
+var r=O.State.delayedElements.count++
+O.State.delayedElements[r]=e
+var i=function(e){return function(){O.State.delayedElements[e]=!1,t()}}(r)
+s(e).delayBegin=(new Date).getTime(),s(e).delay=parseFloat(u.delay),s(e).delayTimer={setTimeout:setTimeout(t,parseFloat(u.delay)),next:i}}),u.duration.toString().toLowerCase()){case"fast":u.duration=200
 break
 case"normal":u.duration=x
 break
