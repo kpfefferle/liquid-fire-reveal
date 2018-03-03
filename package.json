@@ -48,7 +48,6 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
-    "ember-normalize": "kpfefferle/ember-normalize#32f35d585d9678e50cc9b1ab6167e442ad262a11",
     "ember-resolver": "^4.5.0",
     "ember-source": "~3.0.0",
     "ember-source-channel-url": "^1.0.1",
