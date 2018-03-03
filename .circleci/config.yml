@@ -104,6 +104,9 @@ jobs:
       - attach_workspace:
           at: .
       - run: echo 'export PATH=~/liquid-fire-reveal/node_modules/.bin:$PATH' >> $BASH_ENV
+      - run: echo 'Host github.com' > ~/.ssh/config
+      - run: echo '  VerifyHostKeyDNS yes' >> ~/.ssh/config
+      - run: echo '  StrictHostKeyChecking no' >> ~/.ssh/config
       - run:
           name: Deploy Production
           command: ember deploy production --verbose
