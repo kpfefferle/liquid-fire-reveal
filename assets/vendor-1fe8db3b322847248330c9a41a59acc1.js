@@ -3696,8 +3696,8 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.default=t.default?najax:Ember
 function t(e){var t=require(e,null,null,!0)
 if(!t)throw new Error(e+" must export an initializer.")
 var n=t.default
-return n.name||(n.name=e.slice(e.lastIndexOf("/")+1)),n}Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e,n){for(var r=n+"/initializers/",i=n+"/instance-initializers/",o=[],s=[],a=Object.keys(requirejs._eak_seen),u=0;u<a.length;u++){var l=a[u]
-0===l.lastIndexOf(r,0)?o.push(l):0===l.lastIndexOf(i,0)&&s.push(l)}(function(e,n){for(var r=0;r<n.length;r++)e.initializer(t(n[r]))})(e,o),function(e,n){for(var r=0;r<n.length;r++)e.instanceInitializer(t(n[r]))}(e,s)}}),define("ember-resolver/features",[],function(){"use strict"})
+return n.name||(n.name=e.slice(e.lastIndexOf("/")+1)),n}function n(e,t){return-1!==e.indexOf(t,e.length-t.length)}Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e,r){for(var i=r+"/initializers/",o=r+"/instance-initializers/",s=[],a=[],u=Object.keys(requirejs._eak_seen),l=0;l<u.length;l++){var c=u[l]
+0===c.lastIndexOf(i,0)?n(c,"-test")||s.push(c):0===c.lastIndexOf(o,0)&&(n(c,"-test")||a.push(c))}(function(e,n){for(var r=0;r<n.length;r++)e.initializer(t(n[r]))})(e,s),function(e,n){for(var r=0;r<n.length;r++)e.instanceInitializer(t(n[r]))}(e,a)}}),define("ember-resolver/features",[],function(){"use strict"})
 define("ember-resolver/index",["exports","ember-resolver/resolvers/classic"],function(e,t){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})}),define("ember-resolver/resolver",["exports","ember-resolver/resolvers/classic"],function(e,t){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})}),define("ember-resolver/resolvers/classic/container-debug-adapter",["exports","ember-resolver/resolvers/classic/index"],function(e,t){"use strict"
