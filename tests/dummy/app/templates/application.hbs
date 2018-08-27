@@ -8,9 +8,9 @@ For more information, check out the
 
   <div class="example">
     <div class="buttons">
-      <button {{action 'toggleDown'}}>Click to Run Transition</button>
+      <button {{action 'toggleRevealDown'}}>Click to Run Transition</button>
     </div>
-    {{#liquid-if downRed class="down"}}
+    {{#liquid-if revealDownRed class="reveal-down"}}
       <div class="content red">revealDown<br>example</div>
     {{else}}
       <div class="content blue">revealDown<br>example</div>
@@ -19,9 +19,9 @@ For more information, check out the
 
   <div class="example">
     <div class="buttons">
-      <button {{action 'toggleUp'}}>Click to Run Transition</button>
+      <button {{action 'toggleRevealUp'}}>Click to Run Transition</button>
     </div>
-    {{#liquid-if upRed class="up"}}
+    {{#liquid-if revealUpRed class="reveal-up"}}
       <div class="content red">revealUp<br>example</div>
     {{else}}
       <div class="content blue">revealUp<br>example</div>
@@ -30,9 +30,9 @@ For more information, check out the
 
   <div class="example">
     <div class="buttons">
-      <button {{action 'toggleLeft'}}>Click to Run Transition</button>
+      <button {{action 'toggleRevealLeft'}}>Click to Run Transition</button>
     </div>
-    {{#liquid-if leftRed class="left"}}
+    {{#liquid-if revealLeftRed class="reveal-left"}}
       <div class="content red">revealLeft<br>example</div>
     {{else}}
       <div class="content blue">revealLeft<br>example</div>
@@ -41,13 +41,56 @@ For more information, check out the
 
   <div class="example">
     <div class="buttons">
-      <button {{action 'toggleRight'}}>Click to Run Transition</button>
+      <button {{action 'toggleRevealRight'}}>Click to Run Transition</button>
     </div>
-    {{#liquid-if rightRed class="right"}}
-      <div class="content red">revealRight<br>example</div>
+    {{#liquid-if revealRightRed class="reveal-right"}}
+      <div class="content red">hideRight<br>example</div>
     {{else}}
-      <div class="content blue">revealRight<br>example</div>
+      <div class="content blue">hideRight<br>example</div>
     {{/liquid-if}}
   </div>
 
+  <div class="example">
+    <div class="buttons">
+      <button {{action 'toggleHideDown'}}>Click to Run Transition</button>
+    </div>
+    {{#liquid-if hideDownRed class="hide-down"}}
+      <div class="content red">hideDown<br>example</div>
+    {{else}}
+      <div class="content blue">hideDown<br>example</div>
+    {{/liquid-if}}
+  </div>
+
+  <div class="example">
+    <div class="buttons">
+      <button {{action 'toggleHideUp'}}>Click to Run Transition</button>
+    </div>
+    {{#liquid-if hideUpRed class="hide-up"}}
+      <div class="content red">hideUp<br>example</div>
+    {{else}}
+      <div class="content blue">hideUp<br>example</div>
+    {{/liquid-if}}
+  </div>
+
+  <div class="example">
+    <div class="buttons">
+      <button {{action 'toggleHideLeft'}}>Click to Run Transition</button>
+    </div>
+    {{#liquid-if hideLeftRed class="hide-left"}}
+      <div class="content red">hideLeft<br>example</div>
+    {{else}}
+      <div class="content blue">hideLeft<br>example</div>
+    {{/liquid-if}}
+  </div>
+
+  <div class="example">
+    <div class="buttons">
+      <button {{action 'toggleHideRight'}}>Click to Run Transition</button>
+    </div>
+    {{#liquid-if hideRightRed class="hide-right"}}
+      <div class="content red">hideRight<br>example</div>
+    {{else}}
+      <div class="content blue">hideRight<br>example</div>
+    {{/liquid-if}}
+  </div>
 </div>

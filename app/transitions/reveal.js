@@ -1,8 +1,12 @@
 import { animate, Promise, isAnimating, finish } from "liquid-fire";
 
-export default function reveal(dimension, direction, opts) {
+// spread of the shadow effect added during transitioning if opts.shadow is set
+const shadowSize = 50;
+
+export default function reveal(dimension, direction, opts, reveal=true) {
   let property, measure, firstStep;
   let oldParams = {};
+  let newParams = {};
   const revealingElement = findRevealingElement(this);
 
   if (dimension.toLowerCase() === 'x') {
@@ -22,17 +26,41 @@ export default function reveal(dimension, direction, opts) {
   }
 
   return firstStep.then(() => {
-    var bigger = biggestSize(this, measure);
-    oldParams[property] = (bigger * direction) + 'px';
+    let adjustment = opts.shadow ? shadowSize : 0;
+    let bigger = biggestSize(this, measure) + adjustment;
 
-    this.oldElement.css({visibility: '', zIndex: 1});
-    this.newElement.css({visibility: '', zIndex: 0});
-    return animate(this.oldElement, oldParams, opts, 'revealing-out');
+    let [ topElement, bottomElement ] = [ this.oldElement, this.newElement ];
+    let [ fromSize, toSize ] = [ 0, bigger * direction ];
+
+    if (!reveal) {
+      [ bottomElement, topElement ] =  [ topElement, bottomElement ];
+      [ toSize, fromSize ] = [ fromSize, toSize ];
+    }
+
+    oldParams[property] = `${fromSize}px`;
+    newParams[property] = `${toSize}px`;
+
+    bottomElement.css({
+      visibility: '',
+      zIndex: 0
+    });
+    topElement.css({
+      visibility: '',
+      zIndex: 1,
+    });
+    if (opts.shadow) {
+      topElement.css({
+        boxShadow: `0px 10px ${shadowSize}px 20px rgba(0,0,0,0.15)`
+      });
+    }
+    return animate(topElement, oldParams, { duration: 0 }, 'revealing-out').then(() => {
+      return animate(topElement, newParams, opts, 'revealing-out');
+    });
   });
 }
 
 function biggestSize(context, dimension) {
-  var sizes = [];
+  let sizes = [];
   if (context.newElement) {
     sizes.push(parseInt(context.newElement.css(dimension), 10));
     sizes.push(parseInt(context.newElement.parent().css(dimension), 10));
@@ -45,8 +73,8 @@ function biggestSize(context, dimension) {
 }
 
 function findRevealingElement(context) {
-  for (var i = 0; i < context.older.length; i++) {
-    var entry = context.older[i];
+  for (let i = 0; i < context.older.length; i++) {
+    let entry = context.older[i];
     if (isAnimating(entry.element, 'revealing-out')) {
       return entry.element;
     }
