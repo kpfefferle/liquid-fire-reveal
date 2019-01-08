@@ -3619,8 +3619,8 @@ var t=e
 return!!t.errors&&Ember.isArray(t.errors)}(i=Ember.isNone(i)?{}:i)?i.errors.map(function(t){if(n(t)){var r=Ember.assign({},t)
 return r.status=""+t.status,r}return{status:""+e,title:t}}):(o=i,Ember.isArray(o)?i.map(function(t){return n(t)?{status:""+e,title:t.title||"The backend responded with an error",detail:t}:{status:""+e,title:""+t}}):(0,t.default)(i)?[{status:""+e,title:i}]:[{status:""+e,title:i.title||"The backend responded with an error",detail:i}])
 var o}})}),define("ember-ajax/raw",["exports","ember-ajax/ajax-request"],function(e,t){"use strict"
-Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e,r){return(new t.default).raw(e,r)}}),define("ember-ajax/request",["exports","ember-ajax/ajax-request"],function(e,t){"use strict"
-Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e,r){return(new t.default).request(e,r)}}),define("ember-ajax/services/ajax",["exports","ember-ajax/mixins/ajax-request"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e,r){return t.default.create().raw(e,r)}}),define("ember-ajax/request",["exports","ember-ajax/ajax-request"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e,r){return t.default.create().request(e,r)}}),define("ember-ajax/services/ajax",["exports","ember-ajax/mixins/ajax-request"],function(e,t){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.AjaxServiceClass=void 0
 var r=Ember.Service.extend(t.default)
 e.default=r
