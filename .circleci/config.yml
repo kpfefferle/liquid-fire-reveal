@@ -37,16 +37,6 @@ jobs:
           name: Lint JS
           command: yarn run lint:js
 
-  test_lts_2_16:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: .
-      - run: echo 'export PATH=~/liquid-fire-reveal/node_modules/.bin:$PATH' >> $BASH_ENV
-      - run:
-          name: Run Tests
-          command: ember try:one ember-lts-2.16 --skip-cleanup=true
-
   test_lts_2_18:
     <<: *defaults
     steps:
@@ -55,7 +45,7 @@ jobs:
       - run: echo 'export PATH=~/liquid-fire-reveal/node_modules/.bin:$PATH' >> $BASH_ENV
       - run:
           name: Run Tests
-          command: ember try:one ember-lts-2.16 --skip-cleanup=true
+          command: ember try:one ember-lts-2.18 --skip-cleanup=true
 
   test_lts_3_4:
     <<: *defaults
@@ -116,9 +106,6 @@ workflows:
       - lint_js:
           requires:
             - install_dependencies
-      - test_lts_2_16:
-          requires:
-            - install_dependencies
       - test_lts_2_18:
           requires:
             - install_dependencies
@@ -135,7 +122,6 @@ workflows:
           requires:
             - lint_hbs
             - lint_js
-            - test_lts_2_16
             - test_lts_2_18
             - test_release
             - test_beta
