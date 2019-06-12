@@ -15,7 +15,7 @@ else{if("undefined"==typeof self)return
 n=self}var i,r=t.default.exportApplicationGlobal
 i="string"==typeof r?r:Ember.String.classify(t.default.modulePrefix),n[i]||(n[i]=e,e.reopen({willDestroy:function(){this._super.apply(this,arguments),delete n[i]}}))}}Object.defineProperty(e,"__esModule",{value:!0}),e.initialize=n,e.default=void 0
 var i={name:"export-application-global",initialize:n}
-e.default=i}),define("dummy/initializers/liquid-fire",["exports","liquid-fire/ember-internals","liquid-fire/velocity-ext"],function(e,t,n){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0,(0,t.initialize)()
+e.default=i}),define("dummy/initializers/liquid-fire",["exports","liquid-fire/velocity-ext"],function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 e.default={name:"liquid-fire",initialize:function(){}}}),define("dummy/resolver",["exports","ember-resolver"],function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var n=t.default
 e.default=n}),define("dummy/router",["exports","dummy/config/environment"],function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
