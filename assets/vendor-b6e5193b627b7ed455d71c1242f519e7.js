@@ -808,7 +808,7 @@ return t===a?void 0:t},n.removeDescriptors=function(e){this.writeDescriptors(e,a
 void 0!==r&&(t=void 0===t?new Set:t,r.forEach(function(n,r){t.has(r)||(t.add(r),n!==a&&e(r,n))})),n=n.parent}},n.addToListeners=function(e,t,n,r){this.pushListener(e,t,n,r?1:0)},n.removeFromListeners=function(e,t,n){this.pushListener(e,t,n,2)},n.pushListener=function(e,t,n,r){var i=this.writableListeners(),o=d(i,e,t,n)
 if(-1!==o&&o<this._inheritedEnd&&(i.splice(o,1),this._inheritedEnd--,o=-1),-1===o)i.push({event:e,target:t,method:n,kind:r})
 else{var a=i[o]
-2===r&&2!==a.kind&&"function"==typeof n?i.splice(o,1):a.kind=r}},n.writableListeners=function(){return this._flattenedVersion!==s||this.source!==this.proto&&-1!==this._inheritedEnd||s++,-1===this._inheritedEnd&&(this._inheritedEnd=0,this._listeners=[]),this._listeners},n.flattenedListeners=function(){if(this._flattenedVersion<s){0
+2===r&&2!==a.kind?i.splice(o,1):a.kind=r}},n.writableListeners=function(){return this._flattenedVersion!==s||this.source!==this.proto&&-1!==this._inheritedEnd||s++,-1===this._inheritedEnd&&(this._inheritedEnd=0,this._listeners=[]),this._listeners},n.flattenedListeners=function(){if(this._flattenedVersion<s){0
 var e=this.parent
 if(null!==e){var t=e.flattenedListeners()
 if(void 0!==t)if(void 0===this._listeners)this._listeners=t
@@ -3549,7 +3549,7 @@ I.Test=F.Test,I.Test.Adapter=F.Adapter,I.Test.QUnitAdapter=F.QUnitAdapter,I.setu
 var q=I
 e.default=q,r.IS_NODE?r.module.exports=I:n.context.exports.Ember=n.context.exports.Em=I}),e("ember/version",["exports"],function(e){"use strict"
 e.default=void 0
-e.default="3.11.0"}),e("node-module",["exports"],function(e){var t="object"==typeof module&&"function"==typeof module.require
+e.default="3.11.1"}),e("node-module",["exports"],function(e){var t="object"==typeof module&&"function"==typeof module.require
 t?(e.require=module.require,e.module=module,e.IS_NODE=t):(e.require=null,e.module=null,e.IS_NODE=t)}),e("route-recognizer",["exports"],function(e){"use strict"
 e.default=void 0
 var t=Object.create
@@ -3697,7 +3697,7 @@ if(Object.isFrozen(n)||n.hasOwnProperty("metadata"))return Object.freeze((0,t.as
 return(0,t.assign)(n,r)}(c,f),l)
 return O.set(i,h),h}var p={find:function(t,n){var r,i=[]
 3===t.length&&(i=e.map(function(e){return O.get(e)}))
-for(var o=0;e.length>o;o++)if(r=O.get(e[o]),t.call(n,r,o,i))return r},get name(){return a},get paramNames(){return u},get metadata(){return k(c)},get parent(){var t=e[o-1]
+for(var o=0;e.length>o;o++)if(r=O.get(e[o]),t.call(n,r,o,i))return r},get name(){return a},get paramNames(){return u},get metadata(){return k(i.route)},get parent(){var t=e[o-1]
 return void 0===t?null:O.get(t)},get child(){var t=e[o+1]
 return void 0===t?null:O.get(t)},get localName(){var e=this.name.split(".")
 return e[e.length-1]},get params(){return s},get queryParams(){return n}}
@@ -3765,10 +3765,9 @@ if(n.length>0){if(h(a=n[n.length-1]))return this.createParamHandlerInfo(e,t,n,r)
 n.pop()}else{if(r&&r.name===e)return r
 if(!this.preTransitionState)return r
 var s=this.preTransitionState.routeInfos[o]
-a=s&&s.context}return new C(this.router,e,t,a)},r.createParamHandlerInfo=function(e,t,n,r){for(var i={},o=t.length;o--;){var a=r&&e===r.name&&r.params||{},s=n[n.length-1],u=t[o]
-if(h(s))i[u]=""+n.pop()
-else{if(!a.hasOwnProperty(u))throw new Error("You didn't provide enough string/numeric parameters to satisfy all of the dynamic segments for route "+e)
-i[u]=a[u]}}return new A(this.router,e,t,i)},t}(P),L=function(){function e(t){var n=Error.call(this,t)
+a=s&&s.context}return new C(this.router,e,t,a)},r.createParamHandlerInfo=function(e,t,n,r){for(var i={},o=t.length,a=[];o--;){var s=r&&e===r.name&&r.params||{},u=n[n.length-1],l=t[o]
+h(u)?i[l]=""+n.pop():s.hasOwnProperty(l)?i[l]=s[l]:a.push(l)}if(a.length>0)throw new Error("You didn't provide enough string/numeric parameters to satisfy all of the dynamic segments for route "+e+". Missing params: "+a)
+return new A(this.router,e,t,i)},t}(P),L=function(){function e(t){var n=Error.call(this,t)
 this.name="UnrecognizedURLError",this.message=t||"UnrecognizedURL",Error.captureStackTrace?Error.captureStackTrace(this,e):this.stack=n.stack}return e.prototype=Object.create(Error.prototype),e.prototype.constructor=e,e}(),I=function(e){function t(t,n,r){var i
 return(i=e.call(this,t,r)||this).url=n,i.preTransitionState=void 0,i}return(0,n.inheritsLoose)(t,e),t.prototype.applyToState=function(e){var t,n,r=new N,i=this.router.recognizer.recognize(this.url)
 if(!i)throw new L(this.url)
