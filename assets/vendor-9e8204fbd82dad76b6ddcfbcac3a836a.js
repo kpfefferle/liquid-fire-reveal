@@ -4678,7 +4678,8 @@ return this.get("growWidth")&&o.push(this._adaptDimension(e,"width",n,r)),this.g
 var a={}
 return a["outer"+Ember.String.capitalize(r)]=[o[r],i[r]],(0,n.default)(e[0],a,{delay:this._delayFor(i[r],o[r]),duration:this._durationFor(i[r],o[r]),queue:!1,easing:this.get("growEasing")||this.constructor.prototype.growEasing})},_delayFor:function(e,t){return e>t?this.get("shrinkDelay")||this.constructor.prototype.shrinkDelay:this.get("growDelay")||this.constructor.prototype.growDelay},_durationFor:function(e,t){return Math.min(this.get("growDuration")||this.constructor.prototype.growDuration,1e3*Math.abs(e-t)/(this.get("growPixelsPerSecond")||this.constructor.prototype.growPixelsPerSecond))}})
 e.default=r}),define("liquid-fire/helpers/lf-lock-model",["exports","liquid-fire/ember-internals"],function(e,t){"use strict"
-function n(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){var n=[],r=!0,i=!1,o=void 0
+function n(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){if(!(Symbol.iterator in Object(e)||"[object Arguments]"===Object.prototype.toString.call(e)))return
+var n=[],r=!0,i=!1,o=void 0
 try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(u){i=!0,o=u}finally{try{r||null==s.return||s.return()}finally{if(i)throw o}}return n}(e,t)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}()}function r(e){var r=n(e,2),i=r[0],o=r[1]
 return(0,t.routeModel)((0,t.childRoute)(i,o)),i}Object.defineProperty(e,"__esModule",{value:!0}),e.lfLockModel=r,e.default=void 0
 var i=Ember.Helper.helper(r)
