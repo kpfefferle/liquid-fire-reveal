@@ -138,9 +138,6 @@ workflows:
       - test_beta:
           requires:
             - install_dependencies
-      - test_default_with_jquery:
-          requires:
-            - install_dependencies
       - test_classic:
           requires:
             - install_dependencies

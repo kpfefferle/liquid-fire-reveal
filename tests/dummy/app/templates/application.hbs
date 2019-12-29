@@ -10,9 +10,14 @@
 
   <div class="example">
     <div class="buttons">
-      <button {{action "toggleDown"}}>Click to Run Transition</button>
+      <button
+        {{on "click" this.toggleDown}}
+        type="button"
+      >
+        Click to Run Transition
+      </button>
     </div>
-    {{#liquid-if downRed class="down"}}
+    {{#liquid-if this.downRed class="down"}}
       <div class="content red">revealDown<br>example</div>
     {{else}}
       <div class="content blue">revealDown<br>example</div>
@@ -21,9 +26,14 @@
 
   <div class="example">
     <div class="buttons">
-      <button {{action "toggleUp"}}>Click to Run Transition</button>
+      <button
+        {{on "click" this.toggleUp}}
+        type="button"
+      >
+        Click to Run Transition
+      </button>
     </div>
-    {{#liquid-if upRed class="up"}}
+    {{#liquid-if this.upRed class="up"}}
       <div class="content red">revealUp<br>example</div>
     {{else}}
       <div class="content blue">revealUp<br>example</div>
@@ -32,9 +42,14 @@
 
   <div class="example">
     <div class="buttons">
-      <button {{action "toggleLeft"}}>Click to Run Transition</button>
+      <button
+        {{on "click" this.toggleLeft}}
+        type="button"
+      >
+        Click to Run Transition
+      </button>
     </div>
-    {{#liquid-if leftRed class="left"}}
+    {{#liquid-if this.leftRed class="left"}}
       <div class="content red">revealLeft<br>example</div>
     {{else}}
       <div class="content blue">revealLeft<br>example</div>
@@ -43,9 +58,14 @@
 
   <div class="example">
     <div class="buttons">
-      <button {{action "toggleRight"}}>Click to Run Transition</button>
+      <button
+        {{on "click" this.toggleRight}}
+        type="button"
+      >
+        Click to Run Transition
+      </button>
     </div>
-    {{#liquid-if rightRed class="right"}}
+    {{#liquid-if this.rightRed class="right"}}
       <div class="content red">revealRight<br>example</div>
     {{else}}
       <div class="content blue">revealRight<br>example</div>
