@@ -1,23 +1,30 @@
 import Controller from '@ember/controller';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
-export default Controller.extend({
-  downRed: true,
-  upRed: true,
-  leftRed: true,
-  rightRed: true,
+export default class extends Controller {
+  @tracked downRed = true;
+  @tracked upRed = true;
+  @tracked leftRed = true;
+  @tracked rightRed = true;
 
-  actions: {
-    toggleDown() {
-      this.toggleProperty('downRed');
-    },
-    toggleUp() {
-      this.toggleProperty('upRed');
-    },
-    toggleLeft() {
-      this.toggleProperty('leftRed');
-    },
-    toggleRight() {
-      this.toggleProperty('rightRed');
-    }
+  @action
+  toggleDown() {
+    this.toggleProperty('downRed');
   }
-});
+
+  @action
+  toggleUp() {
+    this.toggleProperty('upRed');
+  }
+
+  @action
+  toggleLeft() {
+    this.toggleProperty('leftRed');
+  }
+
+  @action
+  toggleRight() {
+    this.toggleProperty('rightRed');
+  }
+}
