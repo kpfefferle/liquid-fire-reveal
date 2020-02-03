@@ -61,7 +61,7 @@
     "liquid-fire": "0.31.0",
     "loader.js": "^4.7.0",
     "normalize.css": "^8.0.0",
-    "qunit-dom": "^0.9.2"
+    "qunit-dom": "^1.0.0"
   },
   "engines": {
     "node": "10.* || >=12.*"
