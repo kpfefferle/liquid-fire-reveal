@@ -575,7 +575,7 @@ return _.noConflict=function(t){return e.$===_&&(e.$=Kt),t&&e.jQuery===_&&(e.jQu
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.16.0
+ * @version   3.16.1
  */
 var e,t,n
 mainContext=this,function(){var r,i
@@ -618,9 +618,10 @@ if(r)return r
 var i=t.split(":"),o=i[0],a=i[1]
 return b[t]=(0,n.intern)(o+":"+a+"-"+_)},e.FACTORY_FOR=e.Container=e.Registry=void 0
 var o=function(){function e(e,t){void 0===t&&(t={}),this.registry=e,this.owner=t.owner||null,this.cache=(0,n.dictionary)(t.cache||null),this.factoryManagerCache=(0,n.dictionary)(t.factoryManagerCache||null),this.isDestroyed=!1,this.isDestroying=!1}var r=e.prototype
-return r.lookup=function(e,t){return u(this,this.registry.normalize(e),t)},r.destroy=function(){d(this),this.isDestroying=!0},r.finalizeDestroy=function(){p(this),this.isDestroyed=!0},r.reset=function(e){this.isDestroyed||(void 0===e?(d(this),p(this)):function(e,t){var n=e.cache[t]
+return r.lookup=function(e,t){if(this.isDestroyed)throw new Error("Can not call `.lookup` after the owner has been destroyed")
+return u(this,this.registry.normalize(e),t)},r.destroy=function(){this.isDestroying=!0,d(this)},r.finalizeDestroy=function(){p(this),this.isDestroyed=!0},r.reset=function(e){this.isDestroyed||(void 0===e?(d(this),p(this)):function(e,t){var n=e.cache[t]
 delete e.factoryManagerCache[t],n&&(delete e.cache[t],n.destroy&&n.destroy())}(this,this.registry.normalize(e)))},r.ownerInjection=function(){var e
-return(e={})[t.OWNER]=this.owner,e},r.factoryFor=function(e,t){void 0===t&&(t={})
+return(e={})[t.OWNER]=this.owner,e},r.factoryFor=function(e,t){if(void 0===t&&(t={}),this.isDestroyed)throw new Error("Can not call `.factoryFor` after the owner has been destroyed")
 var n=this.registry.normalize(e)
 if(!t.source&&!t.namespace||(n=this.registry.expandLocalLookup(e,t)))return l(this,n,e)},e}()
 function a(e,t){return!1!==e.registry.getOption(t,"singleton")}function s(e,t){return!1!==e.registry.getOption(t,"instantiate")}function u(e,t,n){void 0===n&&(n={})
@@ -629,8 +630,8 @@ if(!n.source&&!n.namespace||(r=e.registry.expandLocalLookup(t,n))){if(!1!==n.sin
 if(void 0!==i)return i}return function(e,t,n,r){var i=l(e,t,n)
 if(void 0===i)return
 if(function(e,t,n){var r=n.instantiate
-return!1!==n.singleton&&!1!==r&&a(e,t)&&s(e,t)}(e,n,r))return e.cache[t]=i.create()
-if(function(e,t,n){var r=n.instantiate,i=n.singleton
+return!1!==n.singleton&&!1!==r&&a(e,t)&&s(e,t)}(e,n,r)){var o=e.cache[t]=i.create()
+return e.isDestroying&&"function"==typeof o.destroy&&o.destroy(),o}if(function(e,t,n){var r=n.instantiate,i=n.singleton
 return!1!==r&&(!1!==i||a(e,t))&&s(e,t)}(e,n,r))return i.create()
 if(function(e,t,n){var r=n.instantiate
 return!1!==n.singleton&&!r&&a(e,t)&&!s(e,t)}(e,n,r)||function(e,t,n){var r=n.instantiate,i=n.singleton
@@ -650,13 +651,15 @@ i.destroy&&i.destroy()}}function p(e){e.cache=(0,n.dictionary)(null),e.factoryMa
 var h=new WeakMap
 e.FACTORY_FOR=h
 var m=function(){function e(e,t,n,r){this.container=e,this.owner=e.owner,this.class=t,this.fullName=n,this.normalizedName=r,this.madeToString=void 0,this.injections=void 0,h.set(this,this)}var n=e.prototype
-return n.toString=function(){return void 0===this.madeToString&&(this.madeToString=this.container.registry.makeToString(this.class,this.fullName)),this.madeToString},n.create=function(e){var n=this.injections
-if(void 0===n){var r=f(this.container,this.normalizedName),o=r.injections
-n=o,r.isDynamic||(this.injections=o)}var a=n
-if(void 0!==e&&(a=(0,i.assign)({},n,e)),!this.class.create)throw new Error("Failed to create an instance of '"+this.normalizedName+"'. Most likely an improperly defined class or an invalid module export.")
-"function"==typeof this.class._initFactory?this.class._initFactory(this):(void 0!==e&&void 0!==a||(a=(0,i.assign)({},a)),(0,t.setOwner)(a,this.owner))
-var s=this.class.create(a)
-return h.set(s,this),s},e}(),v=/^[^:]+:[^:]+$/,g=function(){function e(e){void 0===e&&(e={}),this.fallback=e.fallback||null,this.resolver=e.resolver||null,this.registrations=(0,n.dictionary)(e.registrations||null),this._typeInjections=(0,n.dictionary)(null),this._injections=(0,n.dictionary)(null),this._localLookupCache=Object.create(null),this._normalizeCache=(0,n.dictionary)(null),this._resolveCache=(0,n.dictionary)(null),this._failSet=new Set,this._options=(0,n.dictionary)(null),this._typeOptions=(0,n.dictionary)(null)}var t=e.prototype
+return n.toString=function(){return void 0===this.madeToString&&(this.madeToString=this.container.registry.makeToString(this.class,this.fullName)),this.madeToString},n.create=function(e){var n=this.container
+if(n.isDestroyed)throw new Error("Can not create new instances after the owner has been destroyed (you attempted to create "+this.fullName+")")
+var r=this.injections
+if(void 0===r){var o=f(this.container,this.normalizedName),a=o.injections
+r=a,o.isDynamic||(this.injections=a)}var s=r
+if(void 0!==e&&(s=(0,i.assign)({},r,e)),!this.class.create)throw new Error("Failed to create an instance of '"+this.normalizedName+"'. Most likely an improperly defined class or an invalid module export.")
+"function"==typeof this.class._initFactory?this.class._initFactory(this):(void 0!==e&&void 0!==s||(s=(0,i.assign)({},s)),(0,t.setOwner)(s,this.owner))
+var u=this.class.create(s)
+return h.set(u,this),u},e}(),v=/^[^:]+:[^:]+$/,g=function(){function e(e){void 0===e&&(e={}),this.fallback=e.fallback||null,this.resolver=e.resolver||null,this.registrations=(0,n.dictionary)(e.registrations||null),this._typeInjections=(0,n.dictionary)(null),this._injections=(0,n.dictionary)(null),this._localLookupCache=Object.create(null),this._normalizeCache=(0,n.dictionary)(null),this._resolveCache=(0,n.dictionary)(null),this._failSet=new Set,this._options=(0,n.dictionary)(null),this._typeOptions=(0,n.dictionary)(null)}var t=e.prototype
 return t.container=function(e){return new o(this,e)},t.register=function(e,t,n){void 0===n&&(n={})
 var r=this.normalize(e)
 this._failSet.delete(r),this.registrations[r]=t,this._options[r]=n},t.unregister=function(e){var t=this.normalize(e)
@@ -3136,11 +3139,12 @@ var o=r("TAG_COMPUTE")
 function a(e){return i}function s(e,t){return t>=e[o]()}e.COMPUTE=o
 var u=r("TAG_TYPE")
 e.ALLOW_CYCLES=void 0
-var l=function(){function e(e){this.revision=1,this.lastChecked=1,this.lastValue=1,this.isUpdating=!1,this.subtag=null,this.subtags=null,this[u]=e}return e.prototype[o]=function(){if(this.lastChecked!==i){this.isUpdating=!0,this.lastChecked=i
-try{var e=this.subtags,t=this.subtag,n=this.revision
-if(null!==t&&(n=Math.max(n,t[o]())),null!==e)for(var r=0;r<e.length;r++){var a=e[r][o]()
-n=Math.max(a,n)}this.lastValue=n}finally{this.isUpdating=!1}}return!0===this.isUpdating&&(this.lastChecked=++i),this.lastValue},e.update=function(e,t){var n=e
-t===d?n.subtag=null:(n.subtag=t,n.lastChecked=Math.min(n.lastChecked,t.lastChecked),n.lastValue=Math.max(n.lastValue,t.lastValue))},e.dirty=function(e){e.revision=++i},e}()
+var l=function(){function e(e){this.revision=1,this.lastChecked=1,this.lastValue=1,this.isUpdating=!1,this.subtags=null,this.subtag=null,this.subtagBufferCache=null,this[u]=e}return e.prototype[o]=function(){if(this.lastChecked!==i){this.isUpdating=!0,this.lastChecked=i
+try{var e=this.subtags,t=this.subtag,n=this.subtagBufferCache,r=this.lastValue,a=this.revision
+if(null!==t){var s=t[o]()
+s===n?a=Math.max(a,r):(this.subtagBufferCache=null,a=Math.max(a,s))}if(null!==e)for(var u=0;u<e.length;u++){var l=e[u][o]()
+a=Math.max(l,a)}this.lastValue=a}finally{this.isUpdating=!1}}return!0===this.isUpdating&&(this.lastChecked=++i),this.lastValue},e.update=function(e,t){var n=e,r=t
+r===d?n.subtag=null:(n.subtagBufferCache=r[o](),n.subtag=r)},e.dirty=function(e){e.revision=++i},e}()
 e.MonomorphicTagImpl=l
 var c=l.dirty
 e.dirty=c
@@ -3984,7 +3988,7 @@ F.Test=B.Test,F.Test.Adapter=B.Adapter,F.Test.QUnitAdapter=B.QUnitAdapter,F.setu
 var V=F
 e.default=V,r.IS_NODE?r.module.exports=F:n.context.exports.Ember=n.context.exports.Em=F})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.16.0"})),e("node-module/index",["exports"],(function(e){"use strict"
+e.default="3.16.1"})),e("node-module/index",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.require=e.module=e.IS_NODE=void 0
 var t,n,r="object"==typeof module&&"function"==typeof module.require
 e.IS_NODE=r,e.module=t,e.require=n,r?(e.module=t=module,e.require=n=module.require):(e.module=t=null,e.require=n=null)})),e("route-recognizer",["exports"],(function(e){"use strict"
