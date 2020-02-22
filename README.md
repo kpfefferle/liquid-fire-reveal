@@ -1,4 +1,7 @@
-# liquid-fire-reveal [![CircleCI](https://circleci.com/gh/kpfefferle/liquid-fire-reveal.svg?style=svg)](https://circleci.com/gh/kpfefferle/liquid-fire-reveal)
+# liquid-fire-reveal
+
+[![Ember CI](https://github.com/kpfefferle/liquid-fire-reveal/workflows/Ember%20CI/badge.svg)](https://github.com/kpfefferle/liquid-fire-reveal/actions)
+
 
 [![Ember Observer Score](https://emberobserver.com/badges/liquid-fire-reveal.svg)](https://emberobserver.com/addons/liquid-fire-reveal)
 
