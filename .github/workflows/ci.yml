@@ -49,19 +49,19 @@ jobs:
       - name: Run Tests
         run: yarn ember try:one ember-${{ matrix.scenario }} --skip-cleanup=true
 
-  deploy:
-    # if: contains(github.ref, 'master')
-    name: Deploy to GitHub Pages
-    needs: ember-try
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10.x
-      - name: Install Dependencies
-        run: yarn install
-      - name: Deploy
-        run: yarn ember deploy production --verbose
+  # deploy:
+  #   if: contains(github.ref, 'master')
+  #   name: Deploy
+  #   needs: ember-try
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v1
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 10.x
+  #     - name: Install Dependencies
+  #       run: yarn install
+  #     - name: Deploy
+  #       run: yarn ember deploy production --verbose
