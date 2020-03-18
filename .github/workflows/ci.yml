@@ -16,11 +16,11 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Lint HBS
-        run: yarn run lint:hbs
+        run: yarn lint:hbs
       - name: Lint JS
-        run: yarn run lint:js
+        run: yarn lint:js
       - name: Run Tests
-        run: yarn test
+        run: yarn test:ember
 
   ember-try:
     name: ember-try (${{ matrix.scenario }})
