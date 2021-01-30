@@ -10,21 +10,21 @@ export default class extends Controller {
 
   @action
   toggleDown() {
-    this.toggleProperty('downRed');
+    this.downRed = !this.downRed
   }
 
   @action
   toggleUp() {
-    this.toggleProperty('upRed');
+    this.upRed = !this.upRed;
   }
 
   @action
   toggleLeft() {
-    this.toggleProperty('leftRed');
+    this.leftRed = !this.leftRed;
   }
 
   @action
   toggleRight() {
-    this.toggleProperty('rightRed');
+    this.rightRed = !this.rightRed;
   }
 }
