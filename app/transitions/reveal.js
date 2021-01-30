@@ -1,4 +1,4 @@
-import { animate, Promise, isAnimating, finish } from "liquid-fire";
+import { animate, Promise, isAnimating, finish } from 'liquid-fire';
 
 export default function reveal(dimension, direction, opts) {
   let property, measure, firstStep;
@@ -23,10 +23,10 @@ export default function reveal(dimension, direction, opts) {
 
   return firstStep.then(() => {
     var bigger = biggestSize(this, measure);
-    oldParams[property] = (bigger * direction) + 'px';
+    oldParams[property] = bigger * direction + 'px';
 
-    this.oldElement.css({visibility: '', zIndex: 1});
-    this.newElement.css({visibility: '', zIndex: 0});
+    this.oldElement.css({ visibility: '', zIndex: 1 });
+    this.newElement.css({ visibility: '', zIndex: 0 });
     return animate(this.oldElement, oldParams, opts, 'revealing-out');
   });
 }

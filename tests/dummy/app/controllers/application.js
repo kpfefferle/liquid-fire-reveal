@@ -10,7 +10,7 @@ export default class extends Controller {
 
   @action
   toggleDown() {
-    this.downRed = !this.downRed
+    this.downRed = !this.downRed;
   }
 
   @action
