@@ -1,6 +1,6 @@
 {
   "name": "liquid-fire-reveal",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Reveal transitions for liquid-fire.",
   "keywords": [
     "ember-addon",
