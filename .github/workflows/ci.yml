@@ -22,10 +22,8 @@ jobs:
             ${{ runner.os }}-node-modules-
       - name: Install Dependencies
         run: yarn install
-      - name: Lint HBS
-        run: yarn lint:hbs
-      - name: Lint JS
-        run: yarn lint:js
+      - name: Lint
+        run: yarn lint
       - name: Run Tests
         run: yarn test:ember
 
