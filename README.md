@@ -37,6 +37,6 @@ The old content will slide away in the direction specified, revealing the new co
 
 ## Developing
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/kpfefferle/liquid-fire-reveal.git` this repository
 * `cd liquid-fire-reveal`
 * `yarn`
