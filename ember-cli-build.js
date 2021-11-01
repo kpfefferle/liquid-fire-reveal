@@ -16,5 +16,11 @@ module.exports = function (defaults) {
   app.import('node_modules/normalize.css/normalize.css');
 
   const { maybeEmbroider } = require('@embroider/test-setup');
-  return maybeEmbroider(app);
+  return maybeEmbroider(app, {
+    skipBabel: [
+      {
+        package: 'qunit',
+      },
+    ],
+  });
 };
