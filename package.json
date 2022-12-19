@@ -76,6 +76,10 @@
   "peerDependencies": {
     "ember-source": "^3.28.0 || ^4.0.0"
   },
+  "resolutions": {
+    "@glimmer/interfaces": "^0.84.2",
+    "@glimmer/reference": "^0.84.2"
+  },
   "engines": {
     "node": "14.* || 16.* || >= 18"
   },
