@@ -88,7 +88,7 @@
     "@glimmer/reference": "^0.84.2"
   },
   "engines": {
-    "node": "14.* || 16.* || >= 18"
+    "node": "16.* || 18.* || >= 20"
   },
   "ember": {
     "edition": "octane"
@@ -98,7 +98,7 @@
     "demoURL": "http://kevin.pfefferle.co/liquid-fire-reveal/"
   },
   "volta": {
-    "node": "16.13.2",
-    "yarn": "1.22.18"
+    "node": "18.16.0",
+    "yarn": "1.22.19"
   }
 }
