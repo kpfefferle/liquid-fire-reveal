@@ -1150,7 +1150,7 @@
     ember-cli-version-checker "^5.1.2"
     semver "^7.3.5"
 
-"@embroider/addon-shim@^1.0.0":
+"@embroider/addon-shim@^1.0.0", "@embroider/addon-shim@^1.8.6":
   version "1.8.6"
   resolved "https://registry.yarnpkg.com/@embroider/addon-shim/-/addon-shim-1.8.6.tgz#b676991b4fa32c3a98dc7db7dc6cd655029c3f09"
   integrity sha512-siC9kP78uucEbpDcVyxjkwa76pcs5rVzDVpWO4PDc9EAXRX+pzmUuSTLAK3GztUwx7/PWhz1BenAivqdSvSgfg==
@@ -1159,7 +1159,7 @@
     broccoli-funnel "^3.0.8"
     semver "^7.3.8"
 
-"@embroider/macros@^1.0.0", "@embroider/macros@^1.10.0":
+"@embroider/macros@^1.0.0", "@embroider/macros@^1.10.0", "@embroider/macros@^1.13.1":
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-1.13.1.tgz#aee17e5af0e0086bd36873bdb4e49ea346bab3fa"
   integrity sha512-4htraP/rNIht8uCxXoc59Bw2EsBFfc4YUQD9XSpzJ4xUr1V0GQf9wL/noeSuYSxIhwRfZOErnJhsdyf1hH+I/A==
@@ -4005,7 +4005,7 @@ electron-to-chromium@^1.4.477:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.508.tgz#5641ff2f5ba11df4bd960fe6a2f9f70aa8b9af96"
   integrity sha512-FFa8QKjQK/A5QuFr2167myhMesGrhlOBD+3cYNxO9/S4XzHEXesyTD/1/xF644gC8buFPz3ca6G1LOQD0tZrrg==
 
-ember-auto-import@^2.6.0, ember-auto-import@^2.6.1, ember-auto-import@^2.6.3:
+ember-auto-import@^2.6.0, ember-auto-import@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.6.3.tgz#f18d1b93dd10b08ba5496518436f9d56dd4e000a"
   integrity sha512-uLhrRDJYWCRvQ4JQ1e64XlSrqAKSd6PXaJ9ZsZI6Tlms9T4DtQFxNXasqji2ZRJBVrxEoLCRYX3RTldsQ0vNGQ==
@@ -4288,7 +4288,7 @@ ember-cli-terser@^4.0.2:
   dependencies:
     broccoli-terser-sourcemap "^4.1.0"
 
-ember-cli-test-loader@^3.0.0:
+ember-cli-test-loader@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-test-loader/-/ember-cli-test-loader-3.1.0.tgz#13abd43b7e07e2266a9f0fc5b9dc5455883b18ff"
   integrity sha512-0aocZV9SIoOHiU3hrH3IuLR6busWhTX6UVXgd490hmJkIymmOXNH2+jJoC7Ebkeo3PiOfAdjqhb765QDlHSJOw==
@@ -4488,20 +4488,14 @@ ember-page-title@^8.0.0:
   dependencies:
     "@embroider/addon-shim" "^1.0.0"
 
-ember-qunit@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/ember-qunit/-/ember-qunit-7.0.0.tgz#658aa51dcb376b5eda7fa77c83be89aaf0bedbd1"
-  integrity sha512-KhrndHYEXsHnXvmsGyJLJQ6VCudXaRs5dzPZBsdttZJIhsB6PmYAvq2Q+mh3GRDT/59T/sRDrB3FD3/lATS8aA==
+ember-qunit@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/ember-qunit/-/ember-qunit-8.0.1.tgz#55422d87b53678d079840e75fbe09614114acde6"
+  integrity sha512-13PtywHNPTQKkDW4o8QRkJvcdsZr8hRyvh6xh/YLAX8+HaRLd3nPL8mBF4O/Kur/DAj3QWLvjzktZ2uRNGSh3A==
   dependencies:
-    broccoli-funnel "^3.0.8"
-    broccoli-merge-trees "^3.0.2"
-    common-tags "^1.8.0"
-    ember-auto-import "^2.6.1"
-    ember-cli-babel "^7.26.11"
-    ember-cli-test-loader "^3.0.0"
-    resolve-package-path "^4.0.3"
-    silent-error "^1.1.1"
-    validate-peer-dependencies "^2.2.0"
+    "@embroider/addon-shim" "^1.8.6"
+    "@embroider/macros" "^1.13.1"
+    ember-cli-test-loader "^3.1.0"
 
 ember-resolver@^11.0.1:
   version "11.0.1"
@@ -10358,14 +10352,6 @@ validate-peer-dependencies@^1.1.0:
   dependencies:
     resolve-package-path "^3.1.0"
     semver "^7.3.2"
-
-validate-peer-dependencies@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/validate-peer-dependencies/-/validate-peer-dependencies-2.2.0.tgz#47b8ff008f66a66fc5d8699123844522c1d874f4"
-  integrity sha512-8X1OWlERjiUY6P6tdeU9E0EwO8RA3bahoOVG7ulOZT5MqgNDUO/BQoVjYiHPcNe+v8glsboZRIw9iToMAA2zAA==
-  dependencies:
-    resolve-package-path "^4.0.3"
-    semver "^7.3.8"
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"
