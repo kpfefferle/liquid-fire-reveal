@@ -12,8 +12,7 @@ body {
   height: 550px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+  place-content: space-between;
 }
 
 .example {
