@@ -133,15 +133,7 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-environment-visitor/-/helper-environment-visitor-7.22.20.tgz#96159db61d34a29dba454c959f5ae4a649ba9167"
   integrity sha512-zfedSIzFhat/gFhWfHtgWvlec0nqB9YEIVrpuwjruLlXfUSnA8cJB0miHKwqDnQ7d32aKo2xt88/xZptwxbfhA==
 
-"@babel/helper-function-name@^7.22.5":
-  version "7.22.5"
-  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.22.5.tgz#ede300828905bb15e582c037162f99d5183af1be"
-  integrity sha512-wtHSq6jMRE3uF2otvfuD3DIvVhOsSNshQl0Qrd7qC9oQJzHvOL4qQXlQn2916+CXGywIjpGuIkoyZRRxHPiNQQ==
-  dependencies:
-    "@babel/template" "^7.22.5"
-    "@babel/types" "^7.22.5"
-
-"@babel/helper-function-name@^7.23.0":
+"@babel/helper-function-name@^7.22.5", "@babel/helper-function-name@^7.23.0":
   version "7.23.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.23.0.tgz#1f9a3cdbd5b2698a670c30d2735f9af95ed52759"
   integrity sha512-OErEqsrxjZTJciZ4Oo+eoZqeW9UIiOcuYKRJA4ZAgV9myA+pOXhhmpfNCKjEH/auVfEYVFJ6y1Tc4r0eIApqiw==
@@ -4334,10 +4326,10 @@ ember-cli-version-checker@^5.1.1, ember-cli-version-checker@^5.1.2:
     semver "^7.3.4"
     silent-error "^1.1.1"
 
-ember-cli@~5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-5.4.0.tgz#180cb5b83a1ed65f43d43ec592dcea2634e3df85"
-  integrity sha512-00RfyeDGTo9OtsmxbIqJIKM0wZvvOGAn1w4A9hFrENcuE7I3HKCb3QYKLHLXywG91fTsWbmXRfCL1kQ5pOva4A==
+ember-cli@~5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-5.4.1.tgz#248205ac0abdb970a7f578a729af99567c5e48fc"
+  integrity sha512-+jwp63OPT0zkUnXP563DkIwb1GiI6kGYHg6DyzJKY48BCdevqcgxsMFn8/RENXoF7krg18A5B9cSa8Y1v15tIw==
   dependencies:
     "@pnpm/find-workspace-dir" "^6.0.2"
     broccoli "^3.5.2"
@@ -4423,18 +4415,7 @@ ember-cli@~5.4.0:
     workerpool "^6.4.0"
     yam "^1.0.0"
 
-ember-compatibility-helpers@^1.1.2:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/ember-compatibility-helpers/-/ember-compatibility-helpers-1.2.6.tgz#603579ab2fb14be567ef944da3fc2d355f779cd8"
-  integrity sha512-2UBUa5SAuPg8/kRVaiOfTwlXdeVweal1zdNPibwItrhR0IvPrXpaqwJDlEZnWKEoB+h33V0JIfiWleSG6hGkkA==
-  dependencies:
-    babel-plugin-debug-macros "^0.2.0"
-    ember-cli-version-checker "^5.1.1"
-    find-up "^5.0.0"
-    fs-extra "^9.1.0"
-    semver "^5.4.1"
-
-ember-compatibility-helpers@^1.2.0:
+ember-compatibility-helpers@^1.1.2, ember-compatibility-helpers@^1.2.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/ember-compatibility-helpers/-/ember-compatibility-helpers-1.2.7.tgz#b4f138bba844f8f38f0b8f4d7e928841cd5e6591"
   integrity sha512-BtkjulweiXo9c3yVWrtexw2dTmBrvavD/xixNC6TKOBdrixUwU+6nuOO9dufDWsMxoid7MvtmDpzc9+mE8PdaA==
@@ -5537,16 +5518,7 @@ fixturify@^2.1.0:
     matcher-collection "^2.0.1"
     walk-sync "^2.0.2"
 
-flat-cache@^3.0.4:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-3.1.0.tgz#0e54ab4a1a60fe87e2946b6b00657f1c99e1af3f"
-  integrity sha512-OHx4Qwrrt0E4jEIcI5/Xb+f+QmJYNj2rrK8wiIdQOIrB9WrrJL8cjZvXdXuBTkkEwEqLycb5BeZDV1o2i9bTew==
-  dependencies:
-    flatted "^3.2.7"
-    keyv "^4.5.3"
-    rimraf "^3.0.2"
-
-flat-cache@^3.1.1:
+flat-cache@^3.0.4, flat-cache@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-3.1.1.tgz#a02a15fdec25a8f844ff7cc658f03dd99eb4609b"
   integrity sha512-/qM2b3LUIaIgviBQovTLvijfyOQXPtSRnRK26ksj2J7rzPIecePUIpJsZ4T02Qg+xiAEKIs5K8dsHEd+VaKa/Q==
@@ -5554,11 +5526,6 @@ flat-cache@^3.1.1:
     flatted "^3.2.9"
     keyv "^4.5.3"
     rimraf "^3.0.2"
-
-flatted@^3.2.7:
-  version "3.2.7"
-  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
-  integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
 flatted@^3.2.9:
   version "3.2.9"
