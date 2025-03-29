@@ -3,8 +3,8 @@
 <h1>liquid-fire-reveal</h1>
 
 <p>
-  Below are examples of each of the liquid-fire-reveal transitions.
-  For more information, check out the
+  Below are examples of each of the liquid-fire-reveal transitions. For more
+  information, check out the
   <a href="https://github.com/kpfefferle/liquid-fire-reveal">GitHub repo</a>.
 </p>
 
@@ -12,65 +12,53 @@
 
   <div class="example">
     <div class="buttons">
-      <button
-        {{on "click" this.toggleDown}}
-        type="button"
-      >
+      <button {{on "click" this.toggleDown}} type="button">
         Click to Run Transition
       </button>
     </div>
     {{#liquid-if this.downRed class="down"}}
-      <div class="content red">revealDown<br>example</div>
+      <div class="content red">revealDown<br />example</div>
     {{else}}
-      <div class="content blue">revealDown<br>example</div>
+      <div class="content blue">revealDown<br />example</div>
     {{/liquid-if}}
   </div>
 
   <div class="example">
     <div class="buttons">
-      <button
-        {{on "click" this.toggleUp}}
-        type="button"
-      >
+      <button {{on "click" this.toggleUp}} type="button">
         Click to Run Transition
       </button>
     </div>
     {{#liquid-if this.upRed class="up"}}
-      <div class="content red">revealUp<br>example</div>
+      <div class="content red">revealUp<br />example</div>
     {{else}}
-      <div class="content blue">revealUp<br>example</div>
+      <div class="content blue">revealUp<br />example</div>
     {{/liquid-if}}
   </div>
 
   <div class="example">
     <div class="buttons">
-      <button
-        {{on "click" this.toggleLeft}}
-        type="button"
-      >
+      <button {{on "click" this.toggleLeft}} type="button">
         Click to Run Transition
       </button>
     </div>
     {{#liquid-if this.leftRed class="left"}}
-      <div class="content red">revealLeft<br>example</div>
+      <div class="content red">revealLeft<br />example</div>
     {{else}}
-      <div class="content blue">revealLeft<br>example</div>
+      <div class="content blue">revealLeft<br />example</div>
     {{/liquid-if}}
   </div>
 
   <div class="example">
     <div class="buttons">
-      <button
-        {{on "click" this.toggleRight}}
-        type="button"
-      >
+      <button {{on "click" this.toggleRight}} type="button">
         Click to Run Transition
       </button>
     </div>
     {{#liquid-if this.rightRed class="right"}}
-      <div class="content red">revealRight<br>example</div>
+      <div class="content red">revealRight<br />example</div>
     {{else}}
-      <div class="content blue">revealRight<br>example</div>
+      <div class="content blue">revealRight<br />example</div>
     {{/liquid-if}}
   </div>
 
