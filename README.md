@@ -2,7 +2,6 @@
 
 [![Ember CI](https://github.com/kpfefferle/liquid-fire-reveal/workflows/Ember%20CI/badge.svg)](https://github.com/kpfefferle/liquid-fire-reveal/actions)
 
-
 [![Ember Observer Score](https://emberobserver.com/badges/liquid-fire-reveal.svg)](https://emberobserver.com/addons/liquid-fire-reveal)
 
 > Reveal transitions for [liquid-fire](https://ember-animation.github.io/liquid-fire/).
@@ -25,9 +24,9 @@ ember install liquid-fire-reveal
 ```javascript
 // app/transitions.js
 this.transition(
-  this.fromRoute('login'),
-  this.toRoute('index'),
-  this.use('revealDown')
+  this.fromRoute("login"),
+  this.toRoute("index"),
+  this.use("revealDown"),
 );
 ```
 
@@ -37,6 +36,6 @@ The old content will slide away in the direction specified, revealing the new co
 
 ## Developing
 
-* `git clone https://github.com/kpfefferle/liquid-fire-reveal.git` this repository
-* `cd liquid-fire-reveal`
-* `yarn`
+- `git clone https://github.com/kpfefferle/liquid-fire-reveal.git` this repository
+- `cd liquid-fire-reveal`
+- `yarn`
