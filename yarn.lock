@@ -6905,10 +6905,10 @@ linkify-it@^5.0.0:
   dependencies:
     uc.micro "^2.0.0"
 
-liquid-fire@0.37.0:
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.37.0.tgz#422658602427a9365e2d45db5d4341ae513f0a21"
-  integrity sha512-7j/rl+6F9z/u1ULRof8966wKIvptaZ0mLVkd0ImhEGf+xPNrHMUNaSHvbufvfMhR0mi7S94/Z4woR7c6c3SJyw==
+liquid-fire@0.37.1:
+  version "0.37.1"
+  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.37.1.tgz#8f3a5379ae807cf234fee91868b40930cdde28a1"
+  integrity sha512-ULu4OlcqSB1iJp+/NPPqJCi8XgiMDHuhjKLsazsQTb4xB15FI2HFV/DCfzvFxfUtoaeKlnmxsrUATBmPww0Kgg==
   dependencies:
     "@embroider/addon-shim" "^1.8.6"
     "@embroider/macros" "^1.13.1"
