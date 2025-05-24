@@ -38,4 +38,4 @@ The old content will slide away in the direction specified, revealing the new co
 
 - `git clone https://github.com/kpfefferle/liquid-fire-reveal.git` this repository
 - `cd liquid-fire-reveal`
-- `yarn`
+- `pnpm install`
