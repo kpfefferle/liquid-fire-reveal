@@ -76,7 +76,7 @@
     "eslint-plugin-n": "^17.16.2",
     "eslint-plugin-qunit": "^8.1.2",
     "globals": "^16.0.0",
-    "liquid-fire": "0.37.0",
+    "liquid-fire": "0.37.1",
     "loader.js": "^4.7.0",
     "normalize.css": "^8.0.0",
     "prettier": "^3.5.3",
