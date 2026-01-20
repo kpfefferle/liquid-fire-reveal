@@ -83,8 +83,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0(@babel/core@7.28.6)(eslint@9.39.1)
       ember-cli-deprecation-workflow:
-        specifier: ^3.4.0
-        version: 3.4.0(ember-source@6.8.1(@glimmer/component@2.0.0)(rsvp@4.8.5))
+        specifier: ^4.0.0
+        version: 4.0.0(@babel/core@7.28.6)
       ember-cli-inject-live-reload:
         specifier: ^2.1.0
         version: 2.1.0
@@ -2470,6 +2470,9 @@ packages:
   decorator-transforms@2.3.0:
     resolution: {integrity: sha512-jo8c1ss9yFPudHuYYcrJ9jpkDZIoi+lOGvt+Uyp9B+dz32i50icRMx9Bfa8hEt7TnX1FyKWKkjV+cUdT/ep2kA==}
 
+  decorator-transforms@2.3.1:
+    resolution: {integrity: sha512-PDOk74Zqqy0946Lx4ckXxbgG6uhPScOICtrxL/pXmfznxchqNee0TaJISClGJQe6FeT8ohGqsOgdjfahm4FwEw==}
+
   deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
@@ -2622,11 +2625,8 @@ packages:
     resolution: {integrity: sha512-x6vtuxruExD66qo/OvNldGbxZ3NTaeRSdL63Q9clJ/+JspLXeHtKxl5dDMqRNvl8sItVrZJqq9GYMJfPsg5SWA==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  ember-cli-deprecation-workflow@3.4.0:
-    resolution: {integrity: sha512-Ksrmib4mjD4xa0dqFgxJLBwkSp9EVYH6jSqe2NpODlBKEAZhsVzQj5wKPnC1dXfK3Erq/r1Fh3q4g46FZiCUiw==}
-    engines: {node: '>= 18'}
-    peerDependencies:
-      ember-source: '>= 3.28.0'
+  ember-cli-deprecation-workflow@4.0.0:
+    resolution: {integrity: sha512-HGF7LSz6f8Vx3sISYXnoiuk+8eBULUt7cS/U1YwGMAJtXvL1jvz8PvyAPyrBpcyNP85U+u+3UdKeTWG0HuLbNw==}
 
   ember-cli-get-component-path-option@1.0.0:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
@@ -8810,6 +8810,13 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
 
+  decorator-transforms@2.3.1(@babel/core@7.28.6):
+    dependencies:
+      '@babel/plugin-syntax-decorators': 7.28.6(@babel/core@7.28.6)
+      babel-import-util: 3.0.1
+    transitivePeerDependencies:
+      - '@babel/core'
+
   deep-extend@0.6.0: {}
 
   deep-is@0.1.4: {}
@@ -9063,12 +9070,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-cli-deprecation-workflow@3.4.0(ember-source@6.8.1(@glimmer/component@2.0.0)(rsvp@4.8.5)):
+  ember-cli-deprecation-workflow@4.0.0(@babel/core@7.28.6):
     dependencies:
-      '@babel/core': 7.28.6
-      ember-cli-babel: 8.2.0(@babel/core@7.28.6)
-      ember-source: 6.8.1(@glimmer/component@2.0.0)(rsvp@4.8.5)
+      '@embroider/addon-shim': 1.10.2
+      decorator-transforms: 2.3.1(@babel/core@7.28.6)
     transitivePeerDependencies:
+      - '@babel/core'
       - supports-color
 
   ember-cli-get-component-path-option@1.0.0: {}
@@ -9324,8 +9331,8 @@ snapshots:
 
   ember-modifier@4.2.2(@babel/core@7.28.6):
     dependencies:
-      '@embroider/addon-shim': 1.10.0
-      decorator-transforms: 2.3.0(@babel/core@7.28.6)
+      '@embroider/addon-shim': 1.10.2
+      decorator-transforms: 2.3.1(@babel/core@7.28.6)
       ember-cli-normalize-entity-name: 1.0.0
       ember-cli-string-utils: 1.1.0
     transitivePeerDependencies:
