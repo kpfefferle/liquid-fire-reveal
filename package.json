@@ -75,7 +75,7 @@
     "eslint-plugin-ember": "^12.7.4",
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-qunit": "^8.2.5",
-    "globals": "^16.0.0",
+    "globals": "^17.0.0",
     "liquid-fire": "0.37.1",
     "loader.js": "^4.7.0",
     "normalize.css": "^8.0.0",
