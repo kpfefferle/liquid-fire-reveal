@@ -20,7 +20,7 @@ importers:
         version: 8.2.0(@babel/core@7.29.6)
       ember-cli-htmlbars:
         specifier: ^7.0.0
-        version: 7.0.0(@babel/core@7.29.6)(ember-source@6.10.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
+        version: 7.0.1(@babel/core@7.29.6)(ember-source@6.10.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
       ember-template-imports:
         specifier: ^4.3.0
         version: 4.3.0
@@ -2008,9 +2008,6 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/minimatch@5.1.2':
-    resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
-
   '@types/node@25.0.9':
     resolution: {integrity: sha512-/rpCXHlCWeqClNBwUhDcusJxXYDjZTyE8v5oTO7WbL8eij2nKhUeU89/6xgjU7N4/Vh3He0BtyhJdQbDyhiXAw==}
 
@@ -3299,8 +3296,8 @@ packages:
   ember-cli-get-component-path-option@1.0.0:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
 
-  ember-cli-htmlbars@7.0.0:
-    resolution: {integrity: sha512-6BFxD19eZY+K62JLBDIKb8fXV29+QBrcT5QH4iHi8xseERX9SEWnYej9FpqL2QuoGjaTGml6QOvu9QlSTDYdVw==}
+  ember-cli-htmlbars@7.0.1:
+    resolution: {integrity: sha512-bNVAwTvBOmk7KjGCN0Vq81w8FAWQ1zXwCS1CUUHTeWdcFypRsv0qUEkTtwxho4H3BYaoqMCXPS45Js9WWtEXYw==}
     engines: {node: '>= 20'}
     peerDependencies:
       '@babel/core': '>= 7'
@@ -4145,6 +4142,9 @@ packages:
 
   hash-for-dep@1.5.1:
     resolution: {integrity: sha512-/dQ/A2cl7FBPI2pO0CANkvuuVi/IFS5oTyJ0PsOb6jW6WbVW1js5qJXMJTNbWHXBIPdFTWFbabjB+mE0d+gelw==}
+
+  hash-for-dep@1.5.2:
+    resolution: {integrity: sha512-+kJRJpgO+V8x6c3UQuzO+gzHu5euS8HDOIaIUsOPdQrVu7ajNKkMykbSC8O0VX3LuRnUNf4hHE0o/rJ+nB8czw==}
 
   hashery@1.5.1:
     resolution: {integrity: sha512-iZyKG96/JwPz1N55vj2Ie2vXbhu440zfUfJvSwEqEbeLluk7NnapfGqa7LH0mOsnDxTF85Mx8/dyR6HfqcbmbQ==}
@@ -6330,8 +6330,8 @@ packages:
     resolution: {integrity: sha512-41TvKmDGVpm2iuH7o+DAOt06yyu/cSHpX3uzAwetzASvlNtVddgIjXIb2DfB/Wa20B1Jo86+1Dv1CraSU7hWdw==}
     engines: {node: 10.* || >= 12.*}
 
-  walk-sync@4.0.1:
-    resolution: {integrity: sha512-oXP3IlkfG9Mqdgqh3JGYTPAcryRQd1J1CJOxOgsri2I1MD6N+k4OqxEVP4ZQ0xyYJfYPhBVPRMUVK+N5f13+jQ==}
+  walk-sync@4.0.2:
+    resolution: {integrity: sha512-SPRy/z6vC+Fb20XQDzagaSVVNzX77EcLLPnBJsqNy0CFQgBS6cexbYP62kzRSqNdyIDdRGc7SOCybRrpkf+Pmg==}
     engines: {node: '>= 20.*'}
 
   walker@1.0.8:
@@ -8903,8 +8903,6 @@ snapshots:
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/minimatch@5.1.2': {}
-
   '@types/node@25.0.9':
     dependencies:
       undici-types: 7.16.0
@@ -9452,7 +9450,7 @@ snapshots:
       broccoli-merge-trees: 3.0.2
       broccoli-persistent-filter: 2.3.1
       clone: 2.1.2
-      hash-for-dep: 1.5.1
+      hash-for-dep: 1.5.2
       heimdalljs: 0.2.6
       heimdalljs-logger: 0.1.10
       json-stable-stringify: 1.3.0
@@ -9656,7 +9654,7 @@ snapshots:
       async-promise-queue: 1.0.5
       broccoli-plugin: 1.3.1
       fs-tree-diff: 2.0.1
-      hash-for-dep: 1.5.1
+      hash-for-dep: 1.5.2
       heimdalljs: 0.2.6
       heimdalljs-logger: 0.1.10
       mkdirp: 0.5.6
@@ -9675,7 +9673,7 @@ snapshots:
       async-promise-queue: 1.0.5
       broccoli-plugin: 4.0.7
       fs-tree-diff: 2.0.1
-      hash-for-dep: 1.5.1
+      hash-for-dep: 1.5.2
       heimdalljs: 0.2.6
       heimdalljs-logger: 0.1.10
       promise-map-series: 0.2.3
@@ -10504,7 +10502,7 @@ snapshots:
 
   ember-cli-get-component-path-option@1.0.0: {}
 
-  ember-cli-htmlbars@7.0.0(@babel/core@7.29.6)(ember-source@6.10.0(@glimmer/component@2.0.0)(rsvp@4.8.5)):
+  ember-cli-htmlbars@7.0.1(@babel/core@7.29.6)(ember-source@6.10.0(@glimmer/component@2.0.0)(rsvp@4.8.5)):
     dependencies:
       '@babel/core': 7.29.6
       '@ember/edition-utils': 1.2.0
@@ -10517,7 +10515,7 @@ snapshots:
       heimdalljs-logger: 0.1.10
       js-string-escape: 1.0.1
       silent-error: 1.1.1
-      walk-sync: 4.0.1
+      walk-sync: 4.0.2
     transitivePeerDependencies:
       - supports-color
 
@@ -11864,6 +11862,15 @@ snapshots:
       heimdalljs: 0.2.6
       heimdalljs-logger: 0.1.10
       path-root: 0.1.1
+      resolve: 1.22.12
+      resolve-package-path: 1.2.7
+    transitivePeerDependencies:
+      - supports-color
+
+  hash-for-dep@1.5.2:
+    dependencies:
+      heimdalljs: 0.2.6
+      heimdalljs-logger: 0.1.10
       resolve: 1.22.12
       resolve-package-path: 1.2.7
     transitivePeerDependencies:
@@ -14198,9 +14205,8 @@ snapshots:
       matcher-collection: 2.0.1
       minimatch: 3.1.5
 
-  walk-sync@4.0.1:
+  walk-sync@4.0.2:
     dependencies:
-      '@types/minimatch': 5.1.2
       ensure-posix-path: 1.1.1
       matcher-collection: 2.0.1
       minimatch: 10.2.5
