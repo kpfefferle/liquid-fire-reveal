@@ -4,6 +4,11 @@
 
 [![Ember Observer Score](https://emberobserver.com/badges/liquid-fire-reveal.svg)](https://emberobserver.com/addons/liquid-fire-reveal)
 
+> [!WARNING]
+> **This addon is deprecated and no longer maintained.** The repository is archived and no further releases will be published.
+>
+> The reveal transitions were written against liquid-fire's older jQuery-based transition API and are not expected to work with current liquid-fire releases (0.30+), which pass plain DOM elements to transitions. Consider using liquid-fire's built-in transitions (e.g. `toLeft`, `toDown`, `moveOver`) instead, or adapting [`app/transitions/reveal.js`](app/transitions/reveal.js) (MIT licensed) into your own app's `app/transitions/` directory, in the style of liquid-fire's [`move-over` transition](https://github.com/ember-animation/liquid-fire/blob/main/liquid-fire/src/transitions/move-over.js).
+
 > Reveal transitions for [liquid-fire](https://ember-animation.github.io/liquid-fire/).
 
 This addon defines four new transitions for liquid-fire: `revealUp`, `revealDown`, `revealLeft`, and `revealRight`.
